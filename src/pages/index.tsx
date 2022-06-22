@@ -1,11 +1,10 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+
 
 const Home: NextPage = () => {
+
   return (
-    <div>Test</div>
+    <h1 style={{fontSize: 30, textAlign: "center"}}>Beginning of something beautiful</h1>
   )
 }
 
