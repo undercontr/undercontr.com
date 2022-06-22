@@ -1,5 +1,11 @@
 import { extendTheme } from "@chakra-ui/react"
 
-const theme = {}
-
-export default extendTheme({...theme})
+export default extendTheme({
+    components: {
+        Container: {
+            baseStyle: {
+                maxW: 1100
+            }
+        }
+    }
+});

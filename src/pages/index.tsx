@@ -1,10 +1,10 @@
+import { Box, Button, Tab, TabList, TabPanel, TabPanels, Tabs,  } from '@chakra-ui/react'
 import type { NextPage } from 'next'
-
 
 const Home: NextPage = () => {
 
   return (
-    <h1 style={{fontSize: 30, textAlign: "center"}}>Beginning of something beautiful</h1>
+    <div>asd</div>
   )
 }
 
