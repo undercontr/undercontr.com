@@ -1,7 +1,7 @@
 import { Button, Stack } from "@chakra-ui/react";
 import MenuItem from "./MenuItem";
 
-export default function NavigationMenu(props) {
+export default function NavigationMenu(props: any) {
     return (
         <Stack direction={"row"}>
             <MenuItem>Javascript</MenuItem>

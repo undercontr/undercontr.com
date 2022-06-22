@@ -1,6 +1,6 @@
 import { Box, Container, Flex, Text } from "@chakra-ui/react";
 
-export default function TopBar(props) {
+export default function TopBar(props: any) {
   return (
     <Box bg={"black"}>
       <Container>
