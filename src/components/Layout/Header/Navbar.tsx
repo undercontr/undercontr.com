@@ -7,12 +7,12 @@ export default function Navbar(props: any) {
   return (
     <Box {...props}>
       <Container
-        display={"flex"}
+        display={["block", "flex"]}
         justifyContent={"space-between"}
         alignItems={"center"}
       >
-        <Logo />
-        <HStack gap={3}>
+        <Logo textAlign={["center", "unset"]} />
+        <HStack justifyContent={["center", "unset"]} gap={3}>
           <NavigationMenu />
           <ColorMode />
         </HStack>
