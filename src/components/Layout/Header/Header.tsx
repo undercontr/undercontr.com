@@ -5,7 +5,7 @@ import TopBar from "./TopBar";
 
 export default function Header(props: any) {
     return (
-        <Box bgColor={"yellow.400"}>
+        <Box bgGradient="linear(to-r,pink.500,blue.500)">
             <TopBar />
             <Navbar />
         </Box>
