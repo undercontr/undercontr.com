@@ -2,6 +2,7 @@ import { HamburgerIcon } from "@chakra-ui/icons";
 import { Box, Container, HStack, IconButton } from "@chakra-ui/react";
 import ColorMode from "./ColorMode";
 import Logo from "./Logo";
+import MobileMenu from "./MobileMenu";
 import NavigationMenu from "./NavigationMenu";
 
 export default function Navbar(props: any) {
@@ -16,7 +17,7 @@ export default function Navbar(props: any) {
         {/** responsibve */}
         <HStack display={["flex", "none"]} marginY={30} justifyContent={["center", "unset"]} alignItems={"baseline"} gap={0.5}>
           <ColorMode size={"sm"} />
-          <IconButton aria-label="mobilemenu" size={"sm"} icon={<HamburgerIcon />} />
+          <MobileMenu />
         </HStack>
 
         <HStack display={["none", "flex"]} justifyContent={["center", "unset"]} alignItems={"baseline"} gap={3}>
