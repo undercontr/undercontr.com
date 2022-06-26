@@ -14,9 +14,17 @@ import {
 import MenuItem from "./MenuItem";
 import NavigationMenu from "./NavigationMenu";
 
+type HamburgerMenuType = {
+    handleShow: {
+        isOpen: any,
+        onClose: any,
+        onOpen: any
+    }
+}
+
 export default function HamburgerMenu({
   handleShow: { isOpen, onClose, onOpen },
-}) {
+}: HamburgerMenuType) {
   return (
     <Drawer isOpen={isOpen} placement="right" onClose={onClose} size="full">
       <DrawerOverlay />
