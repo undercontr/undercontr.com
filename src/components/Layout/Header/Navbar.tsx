@@ -16,13 +16,13 @@ export default function Navbar(props: any) {
         <Logo parent={{textAlign: ["left", "unset"]}} logoText={{fontSize: ["4xl", "5xl"]}} />
         {/** responsibve */}
         <HStack display={["flex", "none"]} marginY={30} justifyContent={["center", "unset"]} alignItems={"baseline"} gap={0.5}>
-          <ColorMode size={"sm"} />
+          <ColorMode size="sm" aria-label="color mode button on mobile" />
           <MobileMenu />
         </HStack>
 
         <HStack display={["none", "flex"]} justifyContent={["center", "unset"]} alignItems={"baseline"} gap={3}>
           <NavigationMenu />
-          <ColorMode />
+          <ColorMode aria-label="color mode button on xl to the sm" />
         </HStack>
       </Container>
     </Box>
