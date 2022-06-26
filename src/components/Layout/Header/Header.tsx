@@ -1,11 +1,15 @@
-import { Box, Container } from "@chakra-ui/react";
+import { Box, Container, useColorModeValue } from "@chakra-ui/react";
 import Logo from "./Logo";
 import Navbar from "./Navbar";
 import TopBar from "./TopBar";
 
 export default function Header(props: any) {
+
+    const pink = useColorModeValue("pink.300", "pink.500")
+    const blue = useColorModeValue("blue.300", "blue.500")
+
     return (
-        <Box bgGradient="linear(to-r,pink.600,blue.600)">
+        <Box bgGradient={`linear(to-r,${pink},${blue})`}>
             <TopBar />
             <Navbar />
         </Box>

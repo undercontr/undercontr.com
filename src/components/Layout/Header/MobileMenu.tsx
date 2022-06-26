@@ -11,7 +11,6 @@ export default function MobileMenu() {
         size={"sm"}
         icon={<HamburgerIcon />}
         onClick={disclosure.onOpen}
-
       />
       <HamburgerMenu handleShow={disclosure} />
     </>

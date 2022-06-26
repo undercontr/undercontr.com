@@ -11,14 +11,13 @@ import {
   Heading,
   useDisclosure,
 } from "@chakra-ui/react";
-import MenuItem from "./MenuItem";
 import NavigationMenu from "./NavigationMenu";
 
 type HamburgerMenuType = {
     handleShow: {
-        isOpen: any,
-        onClose: any,
-        onOpen: any
+        isOpen: boolean,
+        onClose: VoidFunction,
+        onOpen: VoidFunction
     }
 }
 
@@ -40,6 +39,7 @@ export default function HamburgerMenu({
             textAlign={"center"}
             direction={"column"}
             onItemClick={onClose}
+            color
           />
         </DrawerBody>
 

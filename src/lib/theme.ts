@@ -1,11 +1,21 @@
-import { extendTheme } from "@chakra-ui/react"
+import { extendTheme, Theme } from "@chakra-ui/react"
 
-export default extendTheme({
+type RecursivePartial<T> = {
+    [P in keyof T]?: RecursivePartial<T[P]>;
+};
+
+const theme: RecursivePartial<Theme> = {
     components: {
         Container: {
             baseStyle: {
                 maxW: 1100
             }
         }
-    }
-});
+    },
+    fonts: {
+        body: "Inter",
+        heading: "Inter",
+    }    
+}
+
+export default extendTheme(theme);

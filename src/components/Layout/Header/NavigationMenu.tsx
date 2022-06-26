@@ -1,13 +1,19 @@
-import { Button, HStack, Stack } from "@chakra-ui/react";
+import { Button, HStack, Stack, StackDirection } from "@chakra-ui/react";
 import MenuItem from "./MenuItem";
 
-export default function NavigationMenu(props: any) {
+type NavigationMenuType = {
+    onItemClick: VoidFunction | undefined,
+    direction: StackDirection | undefined,
+    [x: string]: any    
+}
+
+export default function NavigationMenu({onItemClick, ...props}: Partial<NavigationMenuType>) {
     return (
         <Stack lineHeight={1} direction={props.direction || "row"}>
-            <MenuItem onClick={props.onItemClick} {...props}>Javascript</MenuItem>
-            <MenuItem onClick={props.onItemClick} {...props}>C#</MenuItem>
-            <MenuItem onClick={props.onItemClick} {...props}>Web</MenuItem>
-            <MenuItem onClick={props.onItemClick} {...props}>About</MenuItem>
+            <MenuItem onClick={onItemClick} {...props}>Javascript</MenuItem>
+            <MenuItem onClick={onItemClick} {...props}>C#</MenuItem>
+            <MenuItem onClick={onItemClick} {...props}>Web</MenuItem>
+            <MenuItem onClick={onItemClick} {...props}>About</MenuItem>
         </Stack>
     )
 }
