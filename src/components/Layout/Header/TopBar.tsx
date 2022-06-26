@@ -4,7 +4,7 @@ import {faGithub, faLinkedin, faMedium} from "@fortawesome/free-brands-svg-icons
 
 export default function TopBar(props: any) {
   return (
-    <Box {...props}>
+    <Box bg={"black"} {...props}>
       <Container>
         <Flex justify={["space-between"]} align={"center"}>
           <Text color={"white"} fontSize={13} fontWeight={700}>email me</Text>

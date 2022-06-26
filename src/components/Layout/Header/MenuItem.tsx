@@ -5,7 +5,7 @@ export default function MenuItem({ children, isLast, to = "/", ...rest }: any) {
   return (
     <NextLink href={to} passHref={true}>
       <Link fontWeight={"bold"}>
-        <Text decoration={"none"} display="block" {...rest}>
+        <Text {...rest}>
           {children}
         </Text>
       </Link>
