@@ -1,4 +1,4 @@
-import { BoxProps, LinkProps, StackDirection, StackProps, TextProps, Theme } from "@chakra-ui/react"
+import { BoxProps, LinkProps, StackProps, TextProps, Theme } from "@chakra-ui/react"
 import React, { ReactElement } from "react";
 
 export type RecursivePartial<T> = {

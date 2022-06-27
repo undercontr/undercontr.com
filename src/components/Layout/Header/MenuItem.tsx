@@ -1,4 +1,4 @@
-import { Fade, Link, Text } from "@chakra-ui/react";
+import { Link } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { MenuItemType } from "../../../lib/types/chakra-prop";
 
@@ -10,8 +10,7 @@ export default function MenuItem({
 }: MenuItemType) {
   return (
     <NextLink href={to} passHref={true}>
-      <Link fontWeight={700} {...rest} transition={"all 0.5s ease"}>
-        
+      <Link fontWeight={700} {...rest} transition={"color 0.2s"}>
         {children}
       </Link>
     </NextLink>

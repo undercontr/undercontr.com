@@ -13,7 +13,7 @@ export default function Logo({parent, logoText}: LogoType) {
         color={logoColor}
         fontWeight="bold"
         fontFamily={`Titillium Web, sans-serif`}
-
+        transition={"color 0.2s"}
         {...logoText}
       >
         undercontr
