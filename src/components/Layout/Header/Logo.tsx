@@ -1,6 +1,7 @@
-import { Box, ChakraProps, Text, useColorModeValue } from "@chakra-ui/react";
+import { Box, Text, useColorModeValue } from "@chakra-ui/react";
+import { LogoType } from "../../../lib/types/chakra-prop";
 
-export default function Logo({parent, logoText}: {parent: ChakraProps, logoText: ChakraProps}) {
+export default function Logo({parent, logoText}: LogoType) {
 
   const logoColor = useColorModeValue("blue.900", "white")
 
@@ -11,7 +12,7 @@ export default function Logo({parent, logoText}: {parent: ChakraProps, logoText:
         fontSize={"5xl"}
         color={logoColor}
         fontWeight="bold"
-        fontFamily={"Titillium Web"}
+        fontFamily={`Titillium Web, sans-serif`}
 
         {...logoText}
       >

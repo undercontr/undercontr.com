@@ -17,7 +17,7 @@ export default function ColorMode(props: IconButtonProps) {
     <IconButton
       onClick={toggleColorMode}
       variant={"solid"}
-      // colorScheme={"whiteAlpha"}
+      
       backgroundColor={bg}
       size={"xs"}
       icon={

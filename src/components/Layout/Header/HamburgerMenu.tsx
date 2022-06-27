@@ -1,6 +1,4 @@
 import {
-  Box,
-  Button,
   Drawer,
   DrawerBody,
   DrawerCloseButton,
@@ -9,17 +7,11 @@ import {
   DrawerHeader,
   DrawerOverlay,
   Heading,
-  useDisclosure,
+  Text,
 } from "@chakra-ui/react";
+import { HamburgerMenuType } from "../../../lib/types/chakra-prop";
+import Logo from "./Logo";
 import NavigationMenu from "./NavigationMenu";
-
-type HamburgerMenuType = {
-    handleShow: {
-        isOpen: boolean,
-        onClose: VoidFunction,
-        onOpen: VoidFunction
-    }
-}
 
 export default function HamburgerMenu({
   handleShow: { isOpen, onClose, onOpen },
@@ -30,21 +22,33 @@ export default function HamburgerMenu({
       <DrawerContent>
         <DrawerCloseButton />
         <DrawerHeader textAlign={"center"}>
-          <Heading size={"4xl"} bgGradient="linear(to-r, pink.500,blue.600)" bgClip={"text"}>Menu</Heading>
+          <Heading
+            size={"4xl"}
+            bgGradient="linear(to-r, pink.500,blue.600)"
+            bgClip={"text"}
+          >
+            Menu
+          </Heading>
         </DrawerHeader>
 
         <DrawerBody>
           <NavigationMenu
-            fontSize={20}
-            textAlign={"center"}
-            direction={"column"}
-            onItemClick={onClose}
-            color
+            stackProps={{ direction: "column" }}
+            menuItemProps={{
+              fontSize: 20,
+              textAlign: "center",
+              onClick: onClose,
+            }}
           />
         </DrawerBody>
 
-        <DrawerFooter>
-            undercontr.com | {new Date().getFullYear()}
+        <DrawerFooter
+          display={"flex"}
+          justifyContent={"space-between"}
+          alignItems={"baseline "}
+        >
+          <Logo logoText={{ fontSize: "2xl", letterSpacing: -1.7 , bgGradient: "linear(to-r, pink.500,blue.600)", bgClip: "text"}} />
+          <Text fontWeight={700}>{new Date().getFullYear()}</Text>
         </DrawerFooter>
       </DrawerContent>
     </Drawer>

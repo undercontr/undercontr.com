@@ -1,10 +1,7 @@
 import { extendTheme, Theme } from "@chakra-ui/react"
+import { ChakraTheme } from "./types/chakra-prop";
 
-type RecursivePartial<T> = {
-    [P in keyof T]?: RecursivePartial<T[P]>;
-};
-
-const theme: RecursivePartial<Theme> = {
+const theme: ChakraTheme = {
     components: {
         Container: {
             baseStyle: {
@@ -13,9 +10,13 @@ const theme: RecursivePartial<Theme> = {
         }
     },
     fonts: {
-        body: "Inter",
-        heading: "Inter",
-    }    
+        body: `'Inter', sans-serif`,
+        heading: `'Inter', sans-serif`,
+    },
+    config: {
+        disableTransitionOnChange: false,
+        initialColorMode: "system"
+    }
 }
 
 export default extendTheme(theme);
