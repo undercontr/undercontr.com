@@ -22,7 +22,7 @@ export type HamburgerMenuType = {
 
 export type NavigationMenuType = {
     stackProps?: StackProps,
-    menuItemProps?: TextProps
+    menuItemProps?: LinkProps
 }
 
 export type MenuItemType = LinkProps & {
