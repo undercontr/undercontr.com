@@ -26,7 +26,7 @@ export type NavigationMenuType = {
 }
 
 export type MenuItemType = LinkProps & {
-    children: ReactElement | string,
-    isLast: boolean,
-    to: string,
+    children?: ReactElement | string,
+    isLast?: boolean,
+    to?: string,
 }
