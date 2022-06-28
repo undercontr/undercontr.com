@@ -9,13 +9,13 @@ import {
   Heading,
   Text,
 } from "@chakra-ui/react";
-import { HamburgerMenuType } from "../../../lib/types/chakra-prop";
+import { HamburgerMenuProps } from "../../../lib/types/chakra-props";
 import Logo from "./Logo";
 import NavigationMenu from "./NavigationMenu";
 
 export default function HamburgerMenu({
   handleShow: { isOpen, onClose, onOpen },
-}: HamburgerMenuType) {
+}: HamburgerMenuProps) {
   return (
     <Drawer isOpen={isOpen} placement="right" onClose={onClose} size="full">
       <DrawerOverlay />

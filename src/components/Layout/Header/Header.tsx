@@ -1,5 +1,4 @@
-import { Box, Container, useColorModeValue } from "@chakra-ui/react";
-import Logo from "./Logo";
+import { Box, useColorModeValue } from "@chakra-ui/react";
 import Navbar from "./Navbar";
 import TopBar from "./TopBar";
 

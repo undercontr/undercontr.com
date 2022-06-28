@@ -1,10 +1,9 @@
 import { Box, Text, useColorModeValue } from "@chakra-ui/react";
-import { LogoType } from "../../../lib/types/chakra-prop";
+import { LogoProps } from "../../../lib/types/chakra-props";
 
-export default function Logo({parent, logoText}: LogoType) {
+export default function Logo({parent, logoText}: LogoProps) {
 
   const logoColor = useColorModeValue("blue.900", "white")
-
   return (
     <Box {...parent}>
       <Text

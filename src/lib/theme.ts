@@ -1,5 +1,5 @@
 import { extendTheme, Theme } from "@chakra-ui/react"
-import { ChakraTheme } from "./types/chakra-prop";
+import { ChakraTheme } from "./types/chakra-props";
 
 const theme: ChakraTheme = {
     components: {

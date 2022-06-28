@@ -1,10 +1,6 @@
 import {
-  Button,
-  ChakraProps,
   IconButton,
   IconButtonProps,
-  Switch,
-  Text,
   useColorMode,
   useColorModeValue,
 } from "@chakra-ui/react";
