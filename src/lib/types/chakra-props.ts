@@ -1,8 +1,8 @@
-import { BoxProps, LinkProps, StackProps, TextProps, Theme } from "@chakra-ui/react"
+import { BoxProps, HeadingProps, LinkProps, StackProps, TextProps, Theme, UseDisclosureProps, UseDisclosureReturn } from "@chakra-ui/react"
 import { ReactElement } from "react";
 import { FontAwesomeIconProps } from "@fortawesome/react-fontawesome";
 import { NextLinkProps } from "./next-props";
-import { RecursivePartial } from "./common-types";
+import { ReactChildren, RecursivePartial } from "./common-types";
 
 export type ChakraTheme = RecursivePartial<Theme>
 
@@ -12,12 +12,10 @@ export type LogoProps = {
 }
 
 export type HamburgerMenuProps = {
-    handleShow: {
-        isOpen: boolean,
-        onClose: VoidFunction,
-        onOpen: VoidFunction
-    }
+    handleShow: UseDisclosureReturn
 }
+
+
 
 export type NavigationMenuProps = {
     stackProps?: StackProps,
@@ -25,7 +23,7 @@ export type NavigationMenuProps = {
 }
 
 export type MenuItemProps = LinkProps & {
-    children?: ReactElement | string,
+    children?: ReactChildren<string>,
     isLast?: boolean,
     to?: string,
 }
@@ -33,4 +31,23 @@ export type MenuItemProps = LinkProps & {
 export type SocialMediaLinkProps = {
     linkProps: NextLinkProps,
     iconProps: FontAwesomeIconProps
+}
+
+export type CardProps = BoxProps & {
+    children: ReactChildren<string>
+}
+
+export type CardTitleProps = {
+    container?: BoxProps,
+    h?: HeadingProps,
+    children: ReactChildren<string>
+}
+
+export type CardBodyProps = {
+    limitTo?: number
+    children: ReactChildren<string>
+} 
+
+export type CardFooterProps = {
+    children: ReactChildren<string>
 }

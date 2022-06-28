@@ -5,7 +5,7 @@ import Logo from "./Logo";
 import MobileMenu from "./MobileMenu";
 import NavigationMenu from "./NavigationMenu";
 
-import NextLink from "next/link"
+import NextLink from "../../Utils/NextLink"
 
 export default function Navbar(props: BoxProps) {
 
@@ -18,7 +18,7 @@ export default function Navbar(props: BoxProps) {
         justifyContent={"space-between"}
         alignItems={"center"}
       >
-        <Link as={NextLink} href={"/asd"} passHref={true}><Logo logoText={{fontSize: ["4xl", "6xl"], cursor: "pointer"}} /></Link>
+        <NextLink href={"/"} _hover={{textDecoration: "none"}}><Logo logoText={{fontSize: ["4xl", "6xl"], cursor: "pointer"}} /></NextLink>
         {/** responsibve */}
         <HStack display={["flex", "none"]} marginY={30} justifyContent={["center", "unset"]} alignItems={"baseline"} gap={0.5}>
           <ColorMode size="sm" aria-label="color mode button on mobile" />
