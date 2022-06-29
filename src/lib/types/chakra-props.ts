@@ -43,7 +43,7 @@ export type CardTitleProps = {
     children: ReactChildren<string>
 }
 
-export type CardBodyProps = {
+export type CardBodyProps = BoxProps & {
     limitTo?: number
     children: ReactChildren<string>
 } 

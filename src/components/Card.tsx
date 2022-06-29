@@ -8,7 +8,7 @@ import {
 
 export default function Card({children, ...props}: CardProps) {
   return (
-    <Box overflow={"hidden"} border={"2px"} borderColor={useColorModeValue("blackAlpha.300", "whiteAlpha.300")} rounded={"2xl"} {...props}>
+    <Box overflow={"hidden"} border={"2px"} rounded={"2xl"} {...props}>
        {children}
     </Box>
   );
@@ -24,9 +24,9 @@ Card.Title = function Title(props: CardTitleProps) {
   );
 };
 
-Card.Body = function Body({ limitTo, children }: CardBodyProps) {
+Card.Body = function Body({ limitTo, children, ...props }: CardBodyProps) {
   return (
-    <Box padding={3}>
+    <Box padding={3} {...props}>
       {limitTo && typeof children == "string"
         ? children.substring(0, limitTo) + "..."
         : children}

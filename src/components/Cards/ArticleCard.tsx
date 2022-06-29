@@ -15,34 +15,34 @@ export default function ArticleCard({
     "linear(to-b, whiteAlpha.200, transparent)"
   );
   return (
-    <Card>
+    <Card borderColor={useColorModeValue("blackAlpha.300", "whiteAlpha.300")}>
       <Card.Title
-        h={{ fontWeight: "700", fontFamily: "'Montserrat', sans-serif" }}
+        h={{ textAlign: ["center", "left"], fontWeight: "700", fontFamily: "'Montserrat', sans-serif" }}
         container={{
           bgGradient: borderColor,
         }}
       >
         {title}
       </Card.Title>
-      <Card.Body limitTo={limitTo}>{content}</Card.Body>
+      <Card.Body limitTo={limitTo} textAlign={["justify", "left"]} fontSize={["sm", "md"]}>{content}</Card.Body>
       <Card.Footer display={"flex"} justifyContent={"space-between"} alignItems={"center"} gap={2}>
         <HStack><Text fontSize={"xs"}>author: </Text><Text colorScheme={"purple"} fontSize={"xs"} fontWeight={"bold"}>undercontr</Text></HStack>
-        <Box>
+        <HStack>
+        <Button variant={"ghost"}
+            colorScheme={"blue"}
+            size={["xs", "sm"]}
+            rounded={"lg"}>
+            Read it on <Text marginLeft={5}><FontAwesomeIcon icon={faMedium} /></Text>
+          </Button>
           <Button
             variant={"ghost"}
             colorScheme={"blue"}
-            size="sm"
+            size={["xs", "sm"]}
             rounded={"lg"}
           >
             Read...
           </Button>
-          <Button variant={"ghost"}
-            colorScheme={"blue"}
-            size="sm"
-            rounded={"lg"}>
-            Read it on <Text marginLeft={5}><FontAwesomeIcon icon={faMedium} /></Text>
-          </Button>
-        </Box>
+        </HStack>
       </Card.Footer>
     </Card>
   );
