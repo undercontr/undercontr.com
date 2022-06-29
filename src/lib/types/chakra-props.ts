@@ -48,6 +48,12 @@ export type CardBodyProps = {
     children: ReactChildren<string>
 } 
 
-export type CardFooterProps = {
+export type CardFooterProps = BoxProps & {
     children: ReactChildren<string>
+}
+
+export type ArticleCardProps = {
+    limitTo: number,
+    title: string,
+    content: string
 }

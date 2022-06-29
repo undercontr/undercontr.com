@@ -1,4 +1,4 @@
-import { Box, Grid, Heading, useColorModeValue } from "@chakra-ui/react";
+import { Box, Heading, useColorModeValue } from "@chakra-ui/react";
 import {
   CardBodyProps,
   CardFooterProps,
@@ -6,17 +6,17 @@ import {
   CardTitleProps,
 } from "../lib/types/chakra-props";
 
-export default function Card(props: CardProps) {
+export default function Card({children, ...props}: CardProps) {
   return (
-    <Grid>
-       
-    </Grid>
+    <Box overflow={"hidden"} border={"2px"} borderColor={useColorModeValue("blackAlpha.300", "whiteAlpha.300")} rounded={"2xl"} {...props}>
+       {children}
+    </Box>
   );
 }
 
 Card.Title = function Title(props: CardTitleProps) {
   return (
-    <Box padding={5} width={"full"} {...props.container}>
+    <Box padding={3} width={"full"} {...props.container}>
       <Heading size={"lg"} {...props.h}>
         {props.children}
       </Heading>
@@ -26,7 +26,7 @@ Card.Title = function Title(props: CardTitleProps) {
 
 Card.Body = function Body({ limitTo, children }: CardBodyProps) {
   return (
-    <Box padding={5}>
+    <Box padding={3}>
       {limitTo && typeof children == "string"
         ? children.substring(0, limitTo) + "..."
         : children}
@@ -34,10 +34,10 @@ Card.Body = function Body({ limitTo, children }: CardBodyProps) {
   );
 };
 
-Card.Footer = function Footer(props: CardFooterProps) {
+Card.Footer = function Footer({children, ...props}: CardFooterProps) {
     return (
-        <Box padding={5}>
-            {props.children}
+        <Box padding={3} {...props}>
+            {children}
         </Box>
     )
 }
