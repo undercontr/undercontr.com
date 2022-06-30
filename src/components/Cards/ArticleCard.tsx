@@ -14,9 +14,8 @@ import NextImage from "next/image";
 import { ArticleCardProps } from "../../lib/types/chakra-props";
 import Card from "../Card";
 
-import image from "../../../public/test.jpg";
-
 export default function ArticleCard({
+  coverImage,
   limitTo,
   title,
   content,
@@ -30,7 +29,7 @@ export default function ArticleCard({
       <Grid templateColumns={["", "repeat(4, 1fr)"]}>
         <GridItem colSpan={1} display={"flex"} justifyContent={"center"} alignContent={"center"} p={5}>
         <NextImage
-              src={image}
+              src={coverImage}
               objectFit={"cover"}
               style={{borderRadius: "10px"}}
               alt="test"

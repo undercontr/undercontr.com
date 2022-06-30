@@ -1,7 +1,6 @@
 import { BoxProps, HeadingProps, LinkProps, StackProps, TextProps, Theme, UseDisclosureProps, UseDisclosureReturn } from "@chakra-ui/react"
-import { ReactElement } from "react";
 import { FontAwesomeIconProps } from "@fortawesome/react-fontawesome";
-import { NextLinkProps } from "./next-props";
+import { NextLinkProps, StaticImport } from "./next-props";
 import { ReactChildren, RecursivePartial } from "./common-types";
 
 export type ChakraTheme = RecursivePartial<Theme>
@@ -52,7 +51,9 @@ export type CardFooterProps = BoxProps & {
     children: ReactChildren<string>
 }
 
+
 export type ArticleCardProps = {
+    coverImage: string | StaticImport
     limitTo: number,
     title: string,
     content: string
