@@ -2,7 +2,7 @@ import { Container } from "@chakra-ui/react";
 import type { NextPage } from "next";;
 import ArticleCard from "../components/Cards/ArticleCard";
 
-import image from "../../../public/test.jpg";
+import image from "../../public/test.jpg";
 
 const Home: NextPage = () => {
   return (
