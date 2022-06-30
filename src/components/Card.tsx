@@ -16,7 +16,7 @@ export default function Card({children, ...props}: CardProps) {
 
 Card.Title = function Title(props: CardTitleProps) {
   return (
-    <Box padding={3} width={"full"} {...props.container}>
+    <Box padding={[3,5]} width={"full"} {...props.container}>
       <Heading size={"lg"} {...props.h}>
         {props.children}
       </Heading>
@@ -26,7 +26,7 @@ Card.Title = function Title(props: CardTitleProps) {
 
 Card.Body = function Body({ limitTo, children, ...props }: CardBodyProps) {
   return (
-    <Box padding={3} {...props}>
+    <Box padding={[3,5]} {...props}>
       {limitTo && typeof children == "string"
         ? children.substring(0, limitTo) + "..."
         : children}
@@ -36,7 +36,7 @@ Card.Body = function Body({ limitTo, children, ...props }: CardBodyProps) {
 
 Card.Footer = function Footer({children, ...props}: CardFooterProps) {
     return (
-        <Box padding={3} {...props}>
+        <Box padding={[3,5]} {...props}>
             {children}
         </Box>
     )
